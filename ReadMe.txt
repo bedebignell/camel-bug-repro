@@ -1,15 +1,7 @@
-Camel Java Router Project
-=========================
+Reproduce the error
+=====================
 
-To build this project use
+To reproduce the issue with run:
 
-    mvn install
-
-To run this project from within Maven use
-
-    mvn exec:java
-
-For more help see the Apache Camel documentation
-
-    http://camel.apache.org/
+mvn test -Dtest=nz.bignell.bede.camel.ReproduceUnableToLoadProperties
 
