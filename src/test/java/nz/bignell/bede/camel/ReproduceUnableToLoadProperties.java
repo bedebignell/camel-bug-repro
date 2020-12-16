@@ -33,7 +33,7 @@ public class ReproduceUnableToLoadProperties extends AbstractJUnit4SpringContext
   public void checkProducer() {
     Assert.assertTrue(true);
     Assert.assertNotNull(genericProducer);
-    Object resp = genericProducer.sendBody("direct:testA", ExchangePattern.InOut, "Claus");
+    Object resp = genericProducer.sendBody("direct:testA", ExchangePattern.InOut, " Claus");
     Assert.assertEquals("hi Claus", resp);
   }
 
