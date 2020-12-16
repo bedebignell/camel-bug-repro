@@ -13,13 +13,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
 @RunWith(CamelSpringRunner.class)
-@ContextConfiguration(classes = {ReproduceUnableToLoadProperties.ExampleRouteBuilder.class, ReproduceUnableToLoadProperties.ContextConfig.class}, loader = CamelSpringDelegatingTestContextLoader.class)
+@ContextConfiguration(classes = {PropertySourcesPlaceholderConfigurer.class, ReproduceUnableToLoadProperties.ExampleRouteBuilder.class, ReproduceUnableToLoadProperties.ContextConfig.class}, loader = CamelSpringDelegatingTestContextLoader.class)
 @TestPropertySource(
     properties = {
         "rankOfCamel=1"
